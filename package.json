@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Yatrik N. Patel's Portfolio",
+  "homepage": "https://Yatrik1107.github.io/portfolio-website",
+  "scripts": {
+    "start": "live-server src --port=3000",
+    "build": "rimraf dist && mkdir dist && xcopy /E /I src dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.1"
+  }
+}
