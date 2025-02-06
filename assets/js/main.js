@@ -11,20 +11,7 @@ class App {
         this.initializeTheme();
     }
 
-    initializeApp() {
-        document.getElementById('header').innerHTML = Header();
-        document.getElementById('about').innerHTML = About();
-        document.getElementById('skills').innerHTML = Skills();
-        document.getElementById('experience').innerHTML = Experience();
-        document.getElementById('projects').innerHTML = Projects();
-        document.getElementById('contact').innerHTML = Contact();
-        
-        // Add event listeners after components are loaded
-        this.setupThemeToggle();
-    }
-
     initializeTheme() {
-        // Check for saved theme preference
         if (localStorage.getItem('theme') === 'dark' || 
             (!localStorage.getItem('theme') && 
              window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -42,9 +29,20 @@ class App {
             if (button) {
                 button.addEventListener('click', () => {
                     document.documentElement.classList.toggle('dark');
-                    localStorage.setItem('theme', 
-                        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-                    );
+                    
+                    // Update localStorage
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                    
+                    // Update icons
+                    const moonIcons = document.querySelectorAll('.fa-moon');
+                    const sunIcons = document.querySelectorAll('.fa-sun');
+                    
+                    moonIcons.forEach(icon => icon.classList.toggle('hidden'));
+                    sunIcons.forEach(icon => icon.classList.toggle('hidden'));
                 });
             }
         });
