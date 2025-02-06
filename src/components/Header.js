@@ -4,80 +4,61 @@ const Header = () => {
             <nav class="container mx-auto px-6 py-4">
                 <div class="flex items-center justify-between">
                     <!-- Logo/Name -->
-                    <a href="#" class="flex items-center space-x-2">
-                        <span class="text-2xl font-bold text-blue-600">YP</span>
-                        <span class="hidden md:block text-xl">Yatrik Patel</span>
+                    <a href="#" class="flex items-center space-x-2 group">
+                        <span class="text-2xl font-bold text-blue-600 group-hover:text-blue-700">YP</span>
+                        <span class="hidden md:block text-xl group-hover:text-blue-600">Yatrik Patel</span>
                     </a>
 
                     <!-- Desktop Navigation -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="#about" 
-                           class="nav-link hover:text-blue-600 transition-colors duration-300">
-                           About
-                        </a>
-                        <a href="#experience" 
-                           class="nav-link hover:text-blue-600 transition-colors duration-300">
-                           Experience
-                        </a>
-                        <a href="#projects" 
-                           class="nav-link hover:text-blue-600 transition-colors duration-300">
-                           Projects
-                        </a>
-                        <a href="#skills" 
-                           class="nav-link hover:text-blue-600 transition-colors duration-300">
-                           Skills
-                        </a>
-                        <a href="#contact" 
-                           class="nav-link hover:text-blue-600 transition-colors duration-300">
-                           Contact
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#about" class="nav-link hover:text-blue-600 transition-colors">About</a>
+                        <a href="#experience" class="nav-link hover:text-blue-600 transition-colors">Experience</a>
+                        <a href="#projects" class="nav-link hover:text-blue-600 transition-colors">Projects</a>
+                        <a href="#skills" class="nav-link hover:text-blue-600 transition-colors">Skills</a>
+                        <a href="#contact" class="nav-link hover:text-blue-600 transition-colors">Contact</a>
+                        
+                        <a href="/assets/resume.pdf" 
+                           class="btn-primary flex items-center space-x-2" 
+                           target="_blank">
+                            <i class="fas fa-download"></i>
+                            <span>Resume</span>
                         </a>
                         
-                        <!-- Dark Mode Toggle -->
+                        <!-- Theme Toggle -->
                         <button id="theme-toggle" 
-                                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                             <i class="fas fa-moon dark:hidden"></i>
                             <i class="fas fa-sun hidden dark:block"></i>
                         </button>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                    <div class="md:hidden flex items-center space-x-4">
+                        <button id="theme-toggle-mobile" class="p-2">
+                            <i class="fas fa-moon dark:hidden"></i>
+                            <i class="fas fa-sun hidden dark:block"></i>
+                        </button>
+                        <button id="mobile-menu-button">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Mobile Navigation -->
-                <div id="mobile-menu" 
-                     class="md:hidden hidden pt-4 pb-2 space-y-2">
-                    <a href="#about" class="block py-2 hover:text-blue-600">About</a>
-                    <a href="#experience" class="block py-2 hover:text-blue-600">Experience</a>
-                    <a href="#projects" class="block py-2 hover:text-blue-600">Projects</a>
-                    <a href="#skills" class="block py-2 hover:text-blue-600">Skills</a>
-                    <a href="#contact" class="block py-2 hover:text-blue-600">Contact</a>
+                <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                    <nav class="flex flex-col space-y-2">
+                        <a href="#about" class="mobile-nav-link">About</a>
+                        <a href="#experience" class="mobile-nav-link">Experience</a>
+                        <a href="#projects" class="mobile-nav-link">Projects</a>
+                        <a href="#skills" class="mobile-nav-link">Skills</a>
+                        <a href="#contact" class="mobile-nav-link">Contact</a>
+                        <a href="/assets/resume.pdf" class="mobile-nav-link">
+                            <i class="fas fa-download mr-2"></i> Resume
+                        </a>
+                    </nav>
                 </div>
             </nav>
         </header>
-
-        <script>
-            // Mobile menu toggle
-            document.getElementById('mobile-menu-button').addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.toggle('hidden');
-            });
-
-            // Theme toggle
-            document.getElementById('theme-toggle').addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-            });
-
-            // Smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href'))
-                        .scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-        </script>
     `;
 };
 
