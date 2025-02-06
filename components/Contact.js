@@ -12,14 +12,22 @@ const Contact = () => {
                             </a>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-blue-600"></i>
-                            <a href="tel:+919601548899" class="hover:text-blue-600">
-                                +91 96015 48899
-                            </a>
-                        </div>
-                        <div class="flex items-center space-x-3">
                             <i class="fas fa-map-marker-alt text-blue-600"></i>
                             <span>Ahmedabad, Gujarat, India</span>
+                        </div>
+                        <div class="flex justify-center space-x-4 mt-6">
+                            <a href="https://github.com/Yatrik1107" class="text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="http://www.linkedin.com/in/yatrikpatel1107/" class="text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="https://www.hackerrank.com/profile/yatrikbilodariya" class="text-gray-600 hover:text-blue-600">
+                                <i class="fab fa-hackerrank text-2xl"></i>
+                            </a>
+                            <a href="https://leetcode.com/u/YatrikPatel1107/" class="text-gray-600 hover:text-blue-600">
+                                <i class="fas fa-code text-2xl"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
