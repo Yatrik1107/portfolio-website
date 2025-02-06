@@ -1,33 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Root Variables */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
 }
 
+/* Base Styles */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Layout Components */
 .section-container {
     max-width: 72rem;
     margin: 0 auto;
     padding: 4rem 1rem;
 }
 
+/* Card Styles */
 .card {
     background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     padding: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-.dark .card {
-    background-color: #1f2937;
-}
-
+/* Button Styles */
 .btn-primary {
-    background-color: #2563eb;
+    background-color: var(--primary-color);
     color: white;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -36,9 +38,10 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    background-color: var(--secondary-color);
 }
 
+/* Skill Components */
 .skill-tag {
     background-color: #e5e7eb;
     color: #374151;
@@ -47,11 +50,122 @@ body {
     font-size: 0.875rem;
 }
 
+.skill-icon-container {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-icon-container:hover {
+    transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes iconPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Animation Classes */
+.animate-slide-up {
+    animation: slideUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.skill-icon-container:hover i {
+    animation: iconPop 0.3s ease-in-out;
+}
+
+/* Theme Transition */
+.transition-theme {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark body {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.dark .card {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+}
+
+.dark .btn-primary {
+    background-color: #3b82f6;
+}
+
+.dark .btn-primary:hover {
+    background-color: #2563eb;
+}
+
 .dark .skill-tag {
     background-color: #374151;
     color: #d1d5db;
 }
 
+.dark .nav-link {
+    color: #e5e7eb;
+}
+
+.dark .nav-link:hover {
+    color: #3b82f6;
+}
+
+.dark .mobile-nav-link {
+    color: #e5e7eb;
+    border-bottom: 1px solid #374151;
+}
+
+.dark .mobile-nav-link:hover {
+    background-color: #374151;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .section-container {
         padding: 2rem 1rem;
@@ -60,5 +174,13 @@ body {
     .btn-primary {
         width: 100%;
         text-align: center;
+    }
+
+    .skill-icon-container {
+        padding: 10px;
+    }
+
+    .skill-icon-container i {
+        font-size: 1.5em;
     }
 }
