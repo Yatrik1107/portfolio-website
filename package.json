@@ -5,7 +5,7 @@
   "homepage": "https://Yatrik1107.github.io/portfolio-website",
   "scripts": {
     "start": "live-server src",
-    "build": "rimraf dist && mkdir dist && xcopy /E /I src\\* dist\\ && copy src\\assets\\css\\*.css dist\\assets\\css\\",
+    "build": "rimraf dist && mkdir dist && xcopy /E /I src\\* dist\\ && copy src\\assets\\css\\*.css dist\\assets\\css\\ && xcopy /E /I src\\assets\\images dist\\assets\\images\\",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

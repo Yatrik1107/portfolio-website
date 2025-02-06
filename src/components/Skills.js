@@ -1,34 +1,34 @@
 const skillCategories = {
     "Core Technologies": [
-        { name: "Python", icon: "fab fa-python", color: "text-blue-600" },
-        { name: "SQL", icon: "fas fa-database", color: "text-green-600" },
-        { name: "JavaScript", icon: "fab fa-js", color: "text-yellow-500" },
-        { name: "PowerShell", icon: "fas fa-terminal", color: "text-blue-500" },
-        { name: "HTML/CSS", icon: "fab fa-html5", color: "text-orange-500" }
+        { name: "Python", icon: "fab fa-python" },
+        { name: "SQL", icon: "fas fa-database" },
+        { name: "JavaScript", icon: "fab fa-js" },
+        { name: "PowerShell", icon: "fas fa-terminal" },
+        { name: "HTML/CSS", icon: "fab fa-html5" }
     ],
     "Machine Learning & Data Science": [
-        { name: "PyTorch", icon: "fas fa-brain", color: "text-red-500" },
-        { name: "Data Analysis", icon: "fas fa-chart-bar", color: "text-blue-600" },
-        { name: "NLP", icon: "fas fa-language", color: "text-green-600" },
-        { name: "Computer Vision", icon: "fas fa-eye", color: "text-purple-600" },
-        { name: "Pandas", icon: "fas fa-table", color: "text-indigo-600" }
+        { name: "PyTorch", icon: "fas fa-brain" },
+        { name: "Data Analysis", icon: "fas fa-chart-bar" },
+        { name: "NLP", icon: "fas fa-language" },
+        { name: "Computer Vision", icon: "fas fa-eye" },
+        { name: "Pandas", icon: "fas fa-table" }
     ],
     "Frameworks & Tools": [
-        { name: "Django", icon: "fab fa-python", color: "text-green-700" },
-        { name: "OpenCV", icon: "fas fa-camera", color: "text-blue-500" },
-        { name: "Power BI", icon: "fas fa-chart-line", color: "text-yellow-600" },
-        { name: "SSMS", icon: "fas fa-server", color: "text-blue-700" },
-        { name: "Git", icon: "fab fa-git-alt", color: "text-orange-600" }
+        { name: "Django", icon: "fab fa-python" },
+        { name: "OpenCV", icon: "fas fa-camera" },
+        { name: "Power BI", icon: "fas fa-chart-line" },
+        { name: "SSMS", icon: "fas fa-server" },
+        { name: "Git", icon: "fab fa-git-alt" }
     ],
     "Professional Skills": [
-        { name: "Problem-Solving", icon: "fas fa-puzzle-piece", color: "text-purple-500" },
-        { name: "Team Work", icon: "fas fa-users", color: "text-blue-600" },
-        { name: "Communication", icon: "fas fa-comments", color: "text-green-500" },
-        { name: "Work Ethic", icon: "fas fa-award", color: "text-yellow-600" }
+        { name: "Problem-Solving", icon: "fas fa-puzzle-piece" },
+        { name: "Team Work", icon: "fas fa-users" },
+        { name: "Communication", icon: "fas fa-comments" },
+        { name: "Work Ethic", icon: "fas fa-award" }
     ]
 };
 
-const SkillsSection = () => {
+const Skills = () => {
     return `
         <section id="skills" class="section-container">
             <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
@@ -41,7 +41,7 @@ const SkillsSection = () => {
                             ${skills.map(skill => `
                                 <div class="skill-icon-container group">
                                     <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300">
-                                        <div class="text-3xl ${skill.color} mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                                        <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300 text-gray-700 dark:text-gray-300">
                                             <i class="${skill.icon}"></i>
                                         </div>
                                         <span class="text-sm font-medium text-center">${skill.name}</span>
@@ -56,4 +56,4 @@ const SkillsSection = () => {
     `;
 };
 
-export default SkillsSection;
+export default Skills;
