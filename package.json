@@ -4,10 +4,18 @@
   "description": "Yatrik N. Patel's Portfolio",
   "homepage": "https://Yatrik1107.github.io/portfolio-website",
   "scripts": {
+    "start": "live-server src",
     "build": "rimraf dist && mkdir dist && xcopy /E /I src\\* dist\\ && copy src\\assets\\css\\*.css dist\\assets\\css\\",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "keywords": [
+    "portfolio",
+    "website",
+    "frontend"
+  ],
+  "author": "Yatrik N. Patel",
+  "license": "MIT",
   "devDependencies": {
     "gh-pages": "^6.1.1",
     "live-server": "^1.2.2",
