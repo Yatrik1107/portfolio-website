@@ -4,8 +4,7 @@
   "description": "Yatrik N. Patel's Portfolio",
   "homepage": "https://Yatrik1107.github.io/portfolio-website",
   "scripts": {
-    "start": "live-server src --port=3000",
-    "build": "rimraf dist && mkdir dist && xcopy /E /I src dist",
+    "build": "rimraf dist && mkdir dist && xcopy /E /I src\\* dist\\ && copy src\\assets\\css\\*.css dist\\assets\\css\\",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
