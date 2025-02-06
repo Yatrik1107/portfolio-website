@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'style.css';
 
 :root {
     --primary-color: #2563eb;
@@ -62,13 +63,31 @@ body {
     color: var(--primary-color);
 }
 
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.skill-tag {
+    background: #e5e7eb;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
 /* Dark Mode */
 .dark {
     background-color: var(--dark-bg);
     color: #f3f4f6;
 }
 
-.dark .card {
+.dark .card,
+.dark .project-card {
     background-color: #1f2937;
     border: 1px solid #374151;
 }
@@ -77,7 +96,12 @@ body {
     color: #d1d5db;
 }
 
-/* Media Queries */
+.dark .skill-tag {
+    background: #374151;
+    color: #d1d5db;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .section-container {
         padding: 2rem 1rem;
@@ -85,5 +109,31 @@ body {
     
     .card {
         padding: 1rem;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+
+    .grid {
+        gap: 1rem;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .card:hover,
+    .project-card:hover {
+        transform: none;
+    }
+
+    .btn-primary:hover {
+        transform: none;
     }
 }

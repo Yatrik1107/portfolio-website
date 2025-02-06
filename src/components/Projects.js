@@ -5,7 +5,7 @@ const projects = [
         description: "Image preprocessing pipeline for license plate detection",
         technologies: ["OpenCV", "Python", "Deep Learning"],
         achievements: ["70-80% accuracy", "Real-time processing"],
-        demoLink: "#",
+        // demoLink: "#",
         githubLink: "#"
     },
     {
@@ -14,7 +14,7 @@ const projects = [
         description: "Interactive dashboard for real-time sales tracking",
         technologies: ["Power BI", "SQL", "Data Analysis"],
         achievements: ["Interactive filters", "Drill-down parameters"],
-        demoLink: "#",
+        // demoLink: "#",
         githubLink: "#"
     },
     {
@@ -23,7 +23,7 @@ const projects = [
         description: "A* search algorithm implementation with visualization",
         technologies: ["Python", "Pygame", "Algorithms"],
         achievements: ["Interactive visualization", "Path optimization"],
-        demoLink: "#",
+        // demoLink: "#",
         githubLink: "#"
     },
     {
@@ -32,7 +32,7 @@ const projects = [
         description: "Classic Snake Game with executable package",
         technologies: ["Python", "Pygame"],
         achievements: ["Standalone executable", "Score tracking"],
-        demoLink: "#",
+        // demoLink: "#",
         githubLink: "#"
     }
 ];
@@ -51,9 +51,10 @@ export const ProjectsSection = () => {
                                 <span class="skill-tag">${tech}</span>
                             `).join('')}
                         </div>
-                        <div class="flex justify-between">
-                            <a href="${project.demoLink}" class="btn-primary">Live Demo</a>
-                            <a href="${project.githubLink}" class="btn-primary">GitHub</a>
+                        <div class="flex justify-center">
+                            <a href="${project.githubLink}" class="btn-primary w-full text-center">
+                                <i class="fab fa-github mr-2"></i>View on GitHub
+                            </a>
                         </div>
                     </div>
                 `).join('')}
@@ -61,5 +62,4 @@ export const ProjectsSection = () => {
         </section>
     `;
 };
-
 export default ProjectsSection;
