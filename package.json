@@ -15,10 +15,9 @@
     "frontend"
   ],
   "author": "Yatrik N. Patel",
-  "license": "MIT",
   "devDependencies": {
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "live-server": "^1.2.2",
-    "rimraf": "^5.0.1"
+    "rimraf": "^5.0.10"
   }
 }

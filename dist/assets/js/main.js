@@ -11,44 +11,55 @@ class App {
         this.initializeTheme();
     }
 
+    initializeApp() {
+        document.getElementById('header').innerHTML = Header();
+        document.getElementById('about').innerHTML = About();
+        document.getElementById('skills').innerHTML = Skills();
+        document.getElementById('experience').innerHTML = Experience();
+        document.getElementById('projects').innerHTML = Projects();
+        document.getElementById('contact').innerHTML = Contact();
+        
+        this.setupMobileMenu();
+        this.setupThemeToggle(); // Add this line
+    }
+
     initializeTheme() {
         if (localStorage.getItem('theme') === 'dark' || 
             (!localStorage.getItem('theme') && 
              window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
         }
     }
 
     setupThemeToggle() {
         const toggleButtons = ['theme-toggle', 'theme-toggle-mobile'];
         
-        toggleButtons.forEach(buttonId => {
-            const button = document.getElementById(buttonId);
+        toggleButtons.forEach(id => {
+            const button = document.getElementById(id);
             if (button) {
                 button.addEventListener('click', () => {
                     document.documentElement.classList.toggle('dark');
-                    
-                    // Update localStorage
-                    if (document.documentElement.classList.contains('dark')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
-                    
-                    // Update icons
-                    const moonIcons = document.querySelectorAll('.fa-moon');
-                    const sunIcons = document.querySelectorAll('.fa-sun');
-                    
-                    moonIcons.forEach(icon => icon.classList.toggle('hidden'));
-                    sunIcons.forEach(icon => icon.classList.toggle('hidden'));
+                    localStorage.setItem('theme', 
+                        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+                    );
                 });
             }
         });
     }
+
+    setupMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    }
 }
 
+// Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new App();
 });

@@ -1,6 +1,31 @@
 const projects = [
     {
         id: 1,
+        title: "Lunar Lander Reinforcement Learning with Dueling Double DQN",
+        description: "Implemented an advanced reinforcement learning agent combining Dueling DQN architecture and Double DQN algorithm to solve the challenging Lunar Lander environment from OpenAI Gymnasium.",
+        technologies: ["Python", "PyTorch", "Reinforcement Learning", "Dueling DQN", "OpenAI Gymnasium"],
+        achievements: [
+            "Engineered custom neural network with separate value and advantage streams",
+            "Achieved an average score of 250+ over 100 consecutive episodes in just 715 training episodes",
+            "Applied multiple stability enhancements including experience replay buffer and epsilon-greedy exploration with decay",
+            "Implemented gradient clipping and learning rate scheduling for optimal convergence"
+        ],
+        githubLink: "https://github.com/Yatrik1107/Lunar-Lander-PyTorch"
+    },
+    {
+        id: 2,
+        title: "CartPole Reinforcement Learning with Deep Q-Networks",
+        description: "Implemented a Deep Q-Network (DQN) using PyTorch to solve the CartPole balancing problem from OpenAI Gymnasium, achieving the maximum possible score of 500 consistently.",
+        technologies: ["Python", "PyTorch", "Reinforcement Learning", "DQN", "OpenAI Gymnasium"],
+        achievements: [
+            "Engineered key reinforcement learning components including experience replay buffer",
+            "Implemented epsilon-greedy exploration strategy and dual network architecture to overcome the moving target problem",
+            "Applied neural network optimization techniques with two hidden layers (64 neurons each)",
+            "Achieved optimal policy convergence after approximately 380 training episodes"
+        ],
+        githubLink: "https://github.com/Yatrik1107/CartPole-DQN-PyTorch"
+    },    {
+        id: 3,
         title: "AI Vehicle Tracking System",
         description: "Developed a vehicle detection and counting system using YOLOv8 and Python to identify and track vehicles in real-time video streams. Leveraged object detection models and tracking algorithms to compute vehicle counts as they cross predefined zones.",
         technologies: ["Python", "YOLOv8", "OpenCV", "SORT Algorithm", "Computer Vision"],
@@ -13,7 +38,7 @@ const projects = [
         githubLink: "https://github.com/Yatrik1107/AI-Vehicle-Tracking-System"
     },
     {
-        id: 2,
+        id: 4,
         title: "Auto Number Plate Recognition",
         description: "Developed a license plate recognition system using Python and OpenCV, implementing advanced image preprocessing techniques such as resizing, denoising, and contrast adjustment to enhance input quality. Engineered license plate region detection with various techniques, achieving 70%–80% recognition accuracy.",
         technologies: ["Python", "OpenCV", "Deep Learning", "Image Processing"],
@@ -23,21 +48,8 @@ const projects = [
             "Real-time processing capabilities"
         ],
         githubLink: "https://github.com/Yatrik1107/Auto_Number_Plate_Recognization"
-    },
-    {
+    },    {
         id: 5,
-        title: "E-commerce Sales Dashboard",
-        description: "Designed an interactive Power BI dashboard for e-commerce analytics, integrating filters, slicers, and drill-down parameters to facilitate in-depth business insights. Developed dynamic reports enabling real-time sales tracking and trend analysis for data-driven decision-making.",
-        technologies: ["Power BI", "SQL", "Data Analytics", "Business Intelligence"],
-        achievements: [
-            "Interactive dashboard with real-time tracking",
-            "Custom filters and slicers",
-            "Comprehensive business insights"
-        ],
-        githubLink: "https://github.com/Yatrik1107/Ecommerce-Sales-Dashboard"
-    },
-    {
-        id: 4,
         title: "A* Pathfinding Visualization",
         description: "Implemented the A* search algorithm in Python to compute the shortest path in grid-based maps, optimizing traversal efficiency. Developed a visualization tool to demonstrate pathfinding mechanics, enhancing algorithm comprehension.",
         technologies: ["Python", "Pygame", "Algorithms", "Path Planning"],
@@ -49,7 +61,7 @@ const projects = [
         githubLink: "https://github.com/Yatrik1107/AStar-Pathfinder"
     },
     {
-        id: 3,
+        id: 6,
         title: "Snake Game",
         description: "Developed a classic Snake Game using Python and Pygame, implementing real-time event handling and collision detection. Created a standalone executable file to allow the game to run on any computer without requiring Python installation.",
         technologies: ["Python", "Pygame", "Game Development"],
@@ -59,9 +71,20 @@ const projects = [
             "Cross-platform compatibility"
         ],
         githubLink: "https://github.com/Yatrik1107/Snack_Game"
+    },    {
+        id: 7,
+        title: "E-commerce Sales Dashboard",
+        description: "Designed an interactive Power BI dashboard for e-commerce analytics, integrating filters, slicers, and drill-down parameters to facilitate in-depth business insights. Developed dynamic reports enabling real-time sales tracking and trend analysis for data-driven decision-making.",
+        technologies: ["Power BI", "SQL", "Data Analytics", "Business Intelligence"],
+        achievements: [
+            "Interactive dashboard with real-time tracking",
+            "Custom filters and slicers",
+            "Comprehensive business insights"
+        ],
+        githubLink: "https://github.com/Yatrik1107/Ecommerce-Sales-Dashboard"
     },
     {
-        id: 6,
+        id: 8,
         title: "Excel Data Analysis - Vrinda Store",
         description: "Conducted comprehensive sales data analysis for Vrinda Store using Excel, uncovering key customer insights and regional trends. Developed data-driven marketing strategies based on demographic patterns and channel performance.",
         technologies: ["Excel", "Data Visualization", "Statistical Analysis", "Market Segmentation"],
@@ -73,9 +96,8 @@ const projects = [
         ],
         conclusion: "Focused marketing strategy on women aged 30-49 in top-performing states through primary e-commerce channels",
         githubLink: "https://github.com/Yatrik1107/Excel---Data-Analysis---Vrinda-Store"
-    },
-    {
-        id: 7,
+    },    {
+        id: 9,
         title: "2D Cutting Stock Problem Solver",
         description: "Developed a Java-based solution with GUI for optimizing industrial sheet cutting processes. Implemented greedy algorithms for material optimization and dynamic visualization of cutting patterns.",
         technologies: ["Java", "OOP", "Greedy Algorithms", "Java Swing", "GUI Development"],
@@ -102,7 +124,7 @@ const projects = [
         githubLink: "https://github.com/Yatrik1107/2D-Cutting-Stock-Problem"
     },
     {
-        id: 8,
+        id: 10,
         title: "The Paradise Inn Website",
         description: "Developed a responsive hospitality website showcasing modern web development practices. Created an immersive online experience with intuitive navigation and interactive elements.",
         technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Responsive Design"],
