@@ -65,8 +65,3 @@ To deploy the website on GitHub Pages, follow these steps:
 ## Author
 
 Yatrik N. Patel  
-Python Developer  
-Ahmedabad, India  
-[Your Email]  
-[Your LinkedIn Profile]  
-[Your GitHub Profile]  
