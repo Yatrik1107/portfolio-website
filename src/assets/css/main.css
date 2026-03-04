@@ -200,6 +200,15 @@ body {
     color: var(--dark-text-secondary);
 }
 
+/* Project achievements - muted in dark mode */
+.dark .achievement-heading {
+    color: var(--dark-text-secondary);
+}
+
+.dark .achievement-text {
+    color: #718096;
+}
+
 .dark header {
     background-color: var(--dark-bg-secondary);
     border-bottom: 1px solid var(--dark-border);
