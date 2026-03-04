@@ -165,13 +165,13 @@ const Projects = () => {
                             <h3 class="text-lg font-semibold text-blue-600">${project.title}</h3>
                             ${project.date ? `<span class="text-xs text-gray-400 whitespace-nowrap ml-2 mt-1">${project.date}</span>` : ''}
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">${project.description}</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">${project.description}</p>
                         
                         <div class="mb-4">
-                            <h4 class="text-sm font-semibold text-gray-700 achievement-heading mb-2">Key Achievements</h4>
+                            <h4 class="text-sm font-medium text-gray-700 mb-2">Key Achievements</h4>
                             <ul class="list-disc list-inside space-y-1">
                                 ${project.achievements.map(achievement => `
-                                    <li class="text-gray-600 achievement-text text-sm">${achievement}</li>
+                                    <li class="text-gray-600 text-sm">${achievement}</li>
                                 `).join('')}
                             </ul>
                         </div>
