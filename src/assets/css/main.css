@@ -206,7 +206,7 @@ body {
 }
 
 .dark .achievement-text {
-    color: #718096;
+    color: var(--dark-text-secondary);
 }
 
 .dark header {

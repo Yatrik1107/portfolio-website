@@ -168,10 +168,10 @@ const Projects = () => {
                         <p class="text-gray-600 text-sm mb-4 leading-relaxed">${project.description}</p>
                         
                         <div class="mb-4">
-                            <h4 class="text-sm font-medium text-gray-700 mb-2">Key Achievements</h4>
+                            <h4 class="text-sm font-medium text-gray-700 achievement-heading mb-2">Key Achievements</h4>
                             <ul class="list-disc list-inside space-y-1">
                                 ${project.achievements.map(achievement => `
-                                    <li class="text-gray-600 text-sm">${achievement}</li>
+                                    <li class="text-gray-600 achievement-text text-sm">${achievement}</li>
                                 `).join('')}
                             </ul>
                         </div>
