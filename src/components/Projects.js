@@ -1,8 +1,9 @@
 const projects = [
     {
         id: 1,
-        title: "Lunar Lander Reinforcement Learning with Dueling Double DQN",
-        description: "Implemented an advanced reinforcement learning agent combining Dueling DQN architecture and Double DQN algorithm to solve the challenging Lunar Lander environment from OpenAI Gymnasium.",
+        title: "Lunar Lander Dueling Double DQN",
+        date: "June 2025",
+        description: "Developed reinforcement learning agent using Dueling Double DQN achieving average score above 250 across multiple evaluation episodes.",
         technologies: ["Python", "PyTorch", "Reinforcement Learning", "Dueling DQN", "OpenAI Gymnasium"],
         achievements: [
             "Engineered custom neural network with separate value and advantage streams",
@@ -14,8 +15,9 @@ const projects = [
     },
     {
         id: 2,
-        title: "CartPole Reinforcement Learning with Deep Q-Networks",
-        description: "Implemented a Deep Q-Network (DQN) using PyTorch to solve the CartPole balancing problem from OpenAI Gymnasium, achieving the maximum possible score of 500 consistently.",
+        title: "CartPole with Deep Q-Network",
+        date: "May 2025",
+        description: "Constructed DQN with experience replay achieving stable convergence and consistent maximum environment score, reducing training time significantly.",
         technologies: ["Python", "PyTorch", "Reinforcement Learning", "DQN", "OpenAI Gymnasium"],
         achievements: [
             "Engineered key reinforcement learning components including experience replay buffer",
@@ -158,31 +160,36 @@ const Projects = () => {
             <h2 class="text-3xl font-bold mb-8">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 ${projects.map(project => `
-                    <div class="card hover:shadow-lg transition-all duration-300">
-                        <h3 class="text-xl font-semibold text-blue-600 mb-3">${project.title}</h3>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">${project.description}</p>
+                    <div class="card flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-semibold text-blue-600">${project.title}</h3>
+                            ${project.date ? `<span class="text-xs text-gray-400 whitespace-nowrap ml-2 mt-1">${project.date}</span>` : ''}
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">${project.description}</p>
                         
                         <div class="mb-4">
-                            <h4 class="font-medium mb-2">Key Achievements:</h4>
+                            <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Key Achievements</h4>
                             <ul class="list-disc list-inside space-y-1">
                                 ${project.achievements.map(achievement => `
-                                    <li class="text-gray-600 dark:text-gray-400">${achievement}</li>
+                                    <li class="text-gray-600 dark:text-gray-300 text-sm">${achievement}</li>
                                 `).join('')}
                             </ul>
                         </div>
 
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-1.5 mb-5">
                             ${project.technologies.map(tech => `
                                 <span class="skill-tag">${tech}</span>
                             `).join('')}
                         </div>
 
-                        <a href="${project.githubLink}" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="btn-primary flex items-center justify-center">
-                            <i class="fab fa-github mr-2"></i>View Project
-                        </a>
+                        <div class="mt-auto">
+                            <a href="${project.githubLink}" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-primary flex items-center justify-center">
+                                <i class="fab fa-github mr-2"></i>View Project
+                            </a>
+                        </div>
                     </div>
                 `).join('')}
             </div>

@@ -10,9 +10,9 @@ const About = () => {
                              style="transform-origin: center top;"
                              onerror="this.src='https://via.placeholder.com/200x200?text=YP'">
                     </div>
-                    <h1 class="text-4xl font-bold text-blue-600 mb-2">Yatrik N. Patel</h1>
-                    <h2 class="text-xl text-gray-600 dark:text-gray-400 mb-4">Python Developer | ML Enthusiast</h2>
-                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <h1 class="text-4xl font-bold text-blue-600 mb-1">Yatrik N. Patel</h1>
+                    <h2 class="text-lg text-gray-500 mb-5 font-medium">Software Engineer | Python & FastAPI</h2>
+                    <div class="flex flex-wrap justify-center gap-3 mb-6">
                         <a href="https://github.com/Yatrik1107" 
                            target="_blank"
                            rel="noopener noreferrer"
@@ -48,22 +48,21 @@ const About = () => {
                     <div class="card hover:shadow-lg transition-all duration-300">
                         <h3 class="text-2xl font-semibold mb-4">About Me</h3>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">
-                            Passionate Python Developer specializing in Machine Learning and Data Science solutions. 
-                            Experienced in developing sophisticated NLP applications and computer vision systems. 
-                            Strong focus on automation and optimization, with expertise in Django web applications 
-                            and data analytics using Power BI.
+                            Software Engineer with expertise in Python and FastAPI, specializing in building scalable 
+                            microservices architectures. Experienced in developing async backend systems, Django web 
+                            applications, and data processing pipelines. Strong focus on automation, optimization, 
+                            and production-grade deployments with PostgreSQL, Docker, and cloud services.
                         </p>
                     </div>
 
                     <div class="card hover:shadow-lg transition-all duration-300">
                         <h3 class="text-2xl font-semibold mb-4">Education</h3>
                         <div class="space-y-2">
-                            <p class="font-medium">Bachelor's in Computer Science and Engineering</p>
+                            <p class="font-medium">Bachelor of Engineering in Computer Science and Designing</p>
                             <p class="text-gray-600 dark:text-gray-400">
                                 L.J. Institute of Engineering and Technology
                             </p>
-                            <p class="text-blue-600">CGPA: 9.48/10.0 (Sem-4)</p>
-                            <p class="text-gray-500">November 2021 - Present</p>
+                            <p class="text-gray-500">November 2021 - June 2025</p>
                         </div>
                     </div>
 

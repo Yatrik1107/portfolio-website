@@ -1,31 +1,34 @@
 const experiences = [
     {
         id: 1,
-        role: "Python Developer",
-        company: "MagnusMinds IT Solution",
-        duration: "May 2024 - Present",
+        role: "Software Engineer (Python & FastAPI)",
+        company: "Openxcell",
+        duration: "January 2026 - Present",
         location: "Ahmedabad, India",
         responsibilities: [
-            "Developed and deployed Django web applications with SSMS integration on IIS",
-            "Implemented multi-threading for scheduled tasks, handling real-time NSE API calls",
-            "Built NLP solutions using OpenAI API and spaCy, applying stemming, lemmatization, and NER techniques",
-            "Engineered an automated PDF catalog processing system using Python/OpenCV, achieving 95% accuracy in extracting color samples and product codes"
+            "Contributing to an async FastAPI-based microservices architecture (12+ services) with PostgreSQL persistence and cross-service database synchronization, supporting 10k+ concurrent users",
+            "Building backend integrations for a chargeback workflow by connecting internal systems to Yardi services via middleware, enabling post-approval background syncing without blocking user requests",
+            "Maintaining schema changes using Alembic migrations and GitHub-based version control practices to ensure traceable and consistent database evolution across services"
         ],
-        technologies: ["Python", "Django", "OpenCV", "NLP", "SSMS", "OpenAI API", "spaCy"]
+        technologies: ["Python", "FastAPI", "PostgreSQL", "Alembic", "Microservices", "Docker"]
     },
     {
         id: 2,
-        role: "SQL Developer / Support Engineer",
+        role: "Software Engineer (Python & SQL)",
         company: "MagnusMinds IT Solution",
-        duration: "January 2024 - Present",
+        duration: "January 2024 - January 2026",
         location: "Ahmedabad, India",
         responsibilities: [
-            "Provided production support for SQL jobs automated via PowerShell, troubleshooting failures by analyzing SSIS packages, SSMS logs, and scripts",
-            "Designed, modified, and deployed SSRS reports based on partner requirements, ensuring seamless integration into the production report server",
-            "Managed and updated report subscriptions on the SSRS report server after verifying business approvals",
-            "Created and managed deployment tickets, overseeing the production deployment of reports to the report server"
+            "Designed, developed, and deployed a complete Django web application integrating real-time NSE API calls, multithreaded scheduling, SSMS database, and IIS hosting; led architecture, flow design, and production deployment",
+            "Scaled extraction pipelines leveraging OpenAI API, Amazon Textract, and spaCy, processing invoices with improved data accuracy and enhanced reliability for extracting information from diverse document formats",
+            "Engineered automated PDF catalog processing system using Python OpenCV, achieving 95% accuracy in extracting color samples and product codes across 95+ PDFs, processing 2,800+ images with 90% accuracy",
+            "Provided critical production support for 39+ automated SQL jobs using PowerShell, swiftly troubleshooting failures by analyzing SSIS packages, SSMS logs, and custom scripts to minimize downtime",
+            "Designed, enhanced, and deployed 5+ complex SSRS reports tailored to partner requirements, guaranteeing seamless integration and reliable delivery on production report server",
+            "Managed 63+ report subscriptions on SSRS report server, maintaining strict adherence to business approvals to ensure accurate and timely report distribution",
+            "Created and managed 204+ deployment tickets with 99% success rate, coordinating smooth production deployment of reports to the report server",
+            "Elevated to admin-level control in ActiveBatch scheduler, managing 80+ job schedules and incident response to maintain robust production support and minimize disruptions"
         ],
-        technologies: ["SQL", "PowerShell", "SSRS", "SSIS", "SSMS"]
+        technologies: ["Python", "Django", "OpenCV", "SQL", "PowerShell", "SSRS", "SSIS", "SSMS", "OpenAI API", "spaCy", "Amazon Textract"]
     }
 ];
 
@@ -33,23 +36,23 @@ const ExperienceSection = () => {
     return `
         <section id="experience" class="section-container">
             <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
-            <div class="space-y-8">
+            <div class="space-y-6">
                 ${experiences.map(exp => `
-                    <div class="card hover:shadow-lg transition-all duration-300">
+                    <div class="card">
                         <div class="flex flex-col md:flex-row justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl font-semibold text-blue-600">${exp.role}</h3>
-                                <p class="text-lg text-gray-700 dark:text-gray-300">${exp.company}</p>
+                                <p class="text-base text-gray-600 dark:text-gray-400 font-medium">${exp.company}</p>
                             </div>
                             <div class="text-left md:text-right mt-2 md:mt-0">
-                                <p class="text-gray-600 dark:text-gray-400">${exp.duration}</p>
-                                <p class="text-gray-500 dark:text-gray-500">${exp.location}</p>
+                                <p class="text-sm text-gray-500 font-medium">${exp.duration}</p>
+                                <p class="text-sm text-gray-400">${exp.location}</p>
                             </div>
                         </div>
                         
-                        <ul class="list-disc list-inside space-y-2 mb-4">
+                        <ul class="list-disc list-inside space-y-2 mb-5">
                             ${exp.responsibilities.map(resp => `
-                                <li class="text-gray-700 dark:text-gray-300">${resp}</li>
+                                <li class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">${resp}</li>
                             `).join('')}
                         </ul>
                         
