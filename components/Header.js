@@ -1,12 +1,12 @@
 const Header = () => {
     return `
-        <header class="fixed w-full top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
-            <nav class="container mx-auto px-6 py-4">
+        <header class="fixed w-full top-0 z-50 bg-white dark:bg-gray-800" style="box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <nav class="container mx-auto px-6 py-3">
                 <div class="flex items-center justify-between">
                     <!-- Logo -->
                     <a href="#" class="flex items-center space-x-2 group">
-                        <span class="text-2xl font-bold text-blue-600 group-hover:text-blue-700">YP</span>
-                        <span class="hidden md:block text-xl group-hover:text-blue-600">Yatrik Patel</span>
+                        <span class="text-2xl font-bold text-blue-600">YP</span>
+                        <span class="hidden md:block text-lg font-semibold group-hover:text-blue-600" style="transition: color 0.2s;">Yatrik Patel</span>
                     </a>
 
                     <!-- Desktop Navigation -->
